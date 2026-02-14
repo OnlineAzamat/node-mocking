@@ -6,6 +6,19 @@
       body {
         background: #fad8d8;
       }
+      #add {
+        margin-top: 1em;
+        width: 20rem;
+        display: none;
+      }
+      #add input {
+        margin-bottom: 0.5em;
+      }
+      [name="name"], [name="rrp"] {
+        width: calc(10rem - 2px);
+      }
+      [name="info"] { width: 20rem; }
+      #add button { font-weight: bold; width: 5em; float: right; }
     </style>
   </head>
   <body>
@@ -18,6 +31,12 @@
     </nav>
     <hr>
     <div id="products"></div>
+    <form id="add">
+      <input type="text" name="name" placeholder="name" required>
+      <input type="number" name="rrp" placeholder="rrp" step="0.01" required>
+      <input type="text" name="info" placeholder="info" required>
+      <button type="submit">Add</button>
+    </form>
     <template id="item">
       <style>
         details { font-size: 1.5em; }
