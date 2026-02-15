@@ -28,7 +28,7 @@ const category = document.querySelector('#category');
 const add = document.querySelector("#add");
 
 category.addEventListener('input', async ({ target }) => {
-  add.computedStyleMap.display = 'block';
+  add.style.display = 'block';
   await populateProducts(target.value);
 });
 
